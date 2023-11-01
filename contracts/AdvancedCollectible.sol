@@ -21,4 +21,9 @@ contract AdvancedCollectible is VRFConsumerBaseV2, ERC721URIStorage {
     bytes32 internal keyHash;
     uint64 subscriptionId;
     VRFCoordinatorV2Interface COORDINATOR;
+    
+    constructor(address _VRFCoordinator, uint64 _subscriptionId, bytes32 _keyhash) 
+    VRFConsumerBaseV2(_VRFCoordinator)
+    ERC721("Dogie", "DOG")
+    }
 }
