@@ -16,4 +16,9 @@ contract AdvancedCollectible is VRFConsumerBaseV2, ERC721URIStorage {
     event RequestedCollectible(uint256 indexed requestId); 
     // New event from the video!
     event ReturnedCollectible(uint256 indexed newItemId, Breed breed);
+
+
+    bytes32 internal keyHash;
+    uint64 subscriptionId;
+    VRFCoordinatorV2Interface COORDINATOR;
 }
