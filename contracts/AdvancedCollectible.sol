@@ -40,5 +40,8 @@ contract AdvancedCollectible is VRFConsumerBaseV2, ERC721URIStorage {
     }
 
     function fulfillRandomWords(uint256 requestId, uint256[] memory randomNumber) internal override {
+        address dogOwner = requestIdToSender[requestId];
+        string memory tokenURI = requestIdToTokenURI[requestId];
+        uint256 newItemId = tokenCounter;
     }
 }
