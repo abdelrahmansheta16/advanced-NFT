@@ -31,4 +31,7 @@ contract AdvancedCollectible is VRFConsumerBaseV2, ERC721URIStorage {
         COORDINATOR = VRFCoordinatorV2Interface(_VRFCoordinator);
         subscriptionId = _subscriptionId;
     }
+
+    function createCollectible(string memory tokenURI) public returns (uint256) {
+    }
 }
