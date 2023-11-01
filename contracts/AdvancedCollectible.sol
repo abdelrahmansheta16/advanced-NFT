@@ -43,5 +43,8 @@ contract AdvancedCollectible is VRFConsumerBaseV2, ERC721URIStorage {
         address dogOwner = requestIdToSender[requestId];
         string memory tokenURI = requestIdToTokenURI[requestId];
         uint256 newItemId = tokenCounter;
+        _safeMint(dogOwner, newItemId);
+        _setTokenURI(newItemId, tokenURI);
+        Breed breed = Breed(randomNumber[0] % 3); 
     }
 }
